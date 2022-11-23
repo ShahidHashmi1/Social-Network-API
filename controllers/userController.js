@@ -69,9 +69,10 @@ const userController = {
 
 // POST new user to friends array of a specific user /api/users/:userId/friends/:friendId
     addFriend(req, res) {
+        console.log('req.params', req.params);
         User.findOneAndUpdate(
             { _id: req.params.userId },
-            { $push: { friends: req.body}},
+            { $addToSet: { friends: req.params.friendId}},
             { new: true}
         )
         .then((user) => {
@@ -88,7 +89,7 @@ const userController = {
     removeFriend(req, res) {
         User.findOneAndUpdate(
             { _id: req.params.userId },
-            { $pull: { friends: {friendId: req.params.friendId} }},
+            { $pull: { friends: req.params.friendId }},
             { new: true}
         )
         .then((friend) => {

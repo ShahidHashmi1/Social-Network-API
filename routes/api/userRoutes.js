@@ -19,7 +19,7 @@ router
   .put(updateUser)
 
 router
-  .route('/:userId/friends')
+  .route('/:userId/friends/:friendId')
   .post(addFriend)
 
 router
