@@ -1,13 +1,30 @@
-# Social-Network-API
+# <Social-Network-API>
 
-## USER STORY
+## <Social-Network-API>
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+  ## Table of Contents
+
+  - [License](#license)
+  - [Description](#description)
+  - [User-Story](#User-Story)
+  - [Acceptance-Criteria](#Acceptance-Criteria)
+  - [Deployment](#Deployment)
+
+## Description
+This project is demonstrating the creation of a RESTful API. It is designed to mimick a rudimentary social network, where users can add friends, create thoughts, and react to said thoughts. For database, it is utilizing MongoDB and following the MVC paradigm.
+
+## User-Story
 ```
 AS A social media startup
 I WANT an API for my social network that uses a NoSQL database
 SO THAT my website can handle large amounts of unstructured data
 ```
 
-## ACCEPTANCE CRITERIA
+## Acceptance-Criteria
 ```
 GIVEN a social network API
 WHEN I enter the command to invoke the application
@@ -69,7 +86,7 @@ Create a virtual called `friendCount` that retrieves the length of the user's `f
 
 **Schema Settings**:
 
-Create a virtual called `reactionCount` that retrieves the length of the thought's `reactions` array field on query.
+Created a virtual called `reactionCount` that retrieves the length of the thought's `reactions` array field on query.
 
 ---
 
@@ -108,7 +125,7 @@ This will not be a model, but rather will be used as the `reaction` field's subd
 * `POST` a new user:
 
 ```json
-// example data
+
 {
   "username": "lernantino",
   "email": "lernantino@gmail.com"
@@ -140,7 +157,7 @@ This will not be a model, but rather will be used as the `reaction` field's subd
 * `POST` to create a new thought (don't forget to push the created thought's `_id` to the associated user's `thoughts` array field)
 
 ```json
-// example data
+
 {
   "thoughtText": "Here's a cool thought...",
   "username": "lernantino",
@@ -159,3 +176,7 @@ This will not be a model, but rather will be used as the `reaction` field's subd
 * `POST` to create a reaction stored in a single thought's `reactions` array field
 
 * `DELETE` to pull and remove a reaction by the reaction's `reactionId` value
+
+## Deployment
+
+For more information on my other applications, please visit my <a href="https://github.com/ShahidHashmi1">GitHub Profile.</a>
