@@ -69,7 +69,6 @@ const userController = {
 
 // POST new user to friends array of a specific user /api/users/:userId/friends/:friendId
     addFriend(req, res) {
-        console.log('req.params', req.params);
         User.findOneAndUpdate(
             { _id: req.params.userId },
             { $addToSet: { friends: req.params.friendId}},
