@@ -16,12 +16,15 @@ https://user-images.githubusercontent.com/109056779/204071318-913af3f9-aee5-4abe
 
   - [License](#license)
   - [Description](#description)
+  - [Models](#models)
   - [Deployment](#Deployment)
 
 ## Description
 This project is demonstrating the creation of a RESTful API. It is designed to mimick a rudimentary social network, where users can add friends, create thoughts, and react to said thoughts. For database, it is utilizing  express, node.js, and MongoDB on the backend, while using the wrapper Mongoose. The architecture is following the MVC paradigm.
+  
+<br/>
 
-### Models
+## Models
 
 **User**:
 
@@ -161,6 +164,8 @@ This will not be a model, but rather will be used as the `reaction` field's subd
 
 * `DELETE` to pull and remove a reaction by the reaction's `reactionId` value
 
+<br/>  
+  
 ## Deployment
 
 For more information on my other applications, please visit my <a href="https://github.com/ShahidHashmi1">GitHub Profile.</a>
