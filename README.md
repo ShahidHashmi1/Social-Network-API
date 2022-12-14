@@ -16,32 +16,10 @@ https://user-images.githubusercontent.com/109056779/204071318-913af3f9-aee5-4abe
 
   - [License](#license)
   - [Description](#description)
-  - [User-Story](#User-Story)
-  - [Acceptance-Criteria](#Acceptance-Criteria)
   - [Deployment](#Deployment)
 
 ## Description
-This project is demonstrating the creation of a RESTful API. It is designed to mimick a rudimentary social network, where users can add friends, create thoughts, and react to said thoughts. For database, it is utilizing MongoDB and following the MVC paradigm.
-
-## User-Story
-```
-AS A social media startup
-I WANT an API for my social network that uses a NoSQL database
-SO THAT my website can handle large amounts of unstructured data
-```
-
-## Acceptance-Criteria
-```
-GIVEN a social network API
-WHEN I enter the command to invoke the application
-THEN my server is started and the Mongoose models are synced to the MongoDB database
-WHEN I open API GET routes in Insomnia for users and thoughts
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia
-THEN I am able to successfully create, update, and delete users and thoughts in my database
-WHEN I test API POST and DELETE routes in Insomnia
-THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
-```
+This project is demonstrating the creation of a RESTful API. It is designed to mimick a rudimentary social network, where users can add friends, create thoughts, and react to said thoughts. For database, it is utilizing  express, node.js, and MongoDB on the backend, while using the wrapper Mongoose. The architecture is following the MVC paradigm.
 
 ### Models
 
@@ -57,7 +35,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
   * String
   * Required
   * Unique
-  * Must match a valid email address (look into Mongoose's matching validation)
+  * Must match a valid email address (Mongoose's matching validation)
 
 * `thoughts`
   * Array of `_id` values referencing the `Thought` model
@@ -67,7 +45,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
 **Schema Settings**:
 
-Create a virtual called `friendCount` that retrieves the length of the user's `friends` array field on query.
+Virtual called `friendCount` that retrieves the length of the user's `friends` array field on query.
 
 ---
 
@@ -81,7 +59,7 @@ Create a virtual called `friendCount` that retrieves the length of the user's `f
 * `createdAt`
   * Date
   * Set default value to the current timestamp
-  * Use a getter method to format the timestamp on query
+  * Used getter method to format the timestamp on query
 
 * `username` (The user that created this thought)
   * String
